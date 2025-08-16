@@ -1,3 +1,5 @@
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [];
+import { TodoListComponent } from './shared/components/todo-list/todo-list';
+export const routes: Routes = [
+   { path: '', component: TodoListComponent },
+];

@@ -1,0 +1,13 @@
+<h2>Danh sách công việc</h2>
+
+<div *ngIf="todos.length === 0">
+  Không có công việc nào.
+</div>
+
+<div *ngFor="let todo of todos">
+  <app-todo-item
+    [todo]="todo"
+    (delete)="onDeleteTodo($event)"
+    (edit)="onEditTodo($event)"
+  ></app-todo-item>
+</div>

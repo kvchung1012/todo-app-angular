@@ -1,0 +1,10 @@
+<div class="todo-card">
+  <h3>{{ todo.title }}</h3>
+  <p>{{ todo.description }}</p>
+  <p><strong>Deadline:</strong> {{ todo.deadline | date: 'shortDate' }}</p>
+
+  <div class="actions">
+    <button (click)="onEdit()">Sửa</button>
+    <button (click)="onDelete()"> Xóa</button>
+  </div>
+</div>

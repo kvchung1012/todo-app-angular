@@ -1,0 +1,23 @@
+<div class="form-container">
+  <h2>Thêm công việc mới</h2>
+
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <div class="form-group">
+    <label>Tiêu đề:</label>
+    <input [(ngModel)]="title" type="text" placeholder="Nhập tiêu đề..." />
+  </div>
+
+  <div class="form-group">
+    <label>Mô tả:</label>
+    <textarea [(ngModel)]="description" placeholder="Nhập mô tả..."></textarea>
+  </div>
+
+  <div class="form-group">
+    <label>Hạn chót:</label>
+    <input [(ngModel)]="deadline" type="datetime-local" />
+  </div>
+
+  <button (click)="addTodo()">Thêm công việc</button>
+</div>
+
