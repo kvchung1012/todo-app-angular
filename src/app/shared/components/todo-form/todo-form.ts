@@ -10,7 +10,7 @@ import { TodoItem } from '../../models/todo.model';
   templateUrl: './todo-form.html',
   styleUrl: './todo-form.scss'
 })
-export class TodoForm {
+export class TodoFormComponent {
   title: string = '';
   description: string = '';
   deadline: string = '';

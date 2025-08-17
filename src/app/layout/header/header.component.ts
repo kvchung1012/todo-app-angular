@@ -4,7 +4,7 @@ import { MenuItem } from 'primeng/api';
 import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
 import { MenubarModule } from 'primeng/menubar';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -12,10 +12,11 @@ import { MenubarModule } from 'primeng/menubar';
     CommonModule,
     MenubarModule,
     AvatarModule,
-    BadgeModule
+    BadgeModule,
+    RouterModule,
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrls: ['./header.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
@@ -32,19 +33,19 @@ export class HeaderComponent {
       badge: 'New',
     },
     {
-      label: 'Contact',
+      label: 'List',
       icon: 'pi pi-envelope',
-      routerLink: '/contact'
+      routerLink: '/list'
+    },
+    {
+      label: 'Add',
+      icon: 'pi pi-user',
+      routerLink: '/add'
     },
     {
       label: 'Login',
-      icon: 'pi pi-user',
-      routerLink: '/login'
-    },
-    {
-      label: 'Register',
       icon: 'pi pi-user-plus',
-      routerLink: '/register'
+      routerLink: '/'
     }
   ]
  }

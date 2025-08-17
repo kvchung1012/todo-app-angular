@@ -1,0 +1,19 @@
+<div class="home-container text-center p-6">
+  <h1 class="text-3xl font-bold mb-4">Chào mừng đến với To-Do App</h1>
+  <p class="mb-6">Vui lòng đăng nhập</p>
+
+  <div class="flex justify-center gap-4">
+
+     <button pButton type="button" label="Xem danh sách"
+            class="p-button-raised p-button-info"
+            (click)="goTo('list')"></button>
+
+    <button pButton type="button" label="Thêm công việc"
+            class="p-button-raised p-button-success"
+            (click)="goTo('add')"></button>
+
+    <button pButton type="button" label="Đăng nhập"
+            class="p-button-raised p-button-warning"
+            (click)="goTo('login')"></button>
+  </div>
+</div>

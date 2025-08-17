@@ -1,0 +1,43 @@
+<div class="auth-container">
+  <h2 *ngIf="isLogin">Đăng nhập</h2>
+  <h2 *ngIf="!isLogin">Đăng ký</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <label>Email:</label>
+    <input
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      required
+      placeholder="Nhập email"
+    />
+
+    <label>Mật khẩu:</label>
+    <input
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      required
+      placeholder="Nhập mật khẩu"
+    />
+
+    <div *ngIf="!isLogin">
+      <label>Xác nhận mật khẩu:</label>
+      <input
+        type="password"
+        [(ngModel)]="confirmPassword"
+        name="confirmPassword"
+        required
+        placeholder="Nhập lại mật khẩu"
+      />
+    </div>
+
+    <button type="submit">{{ isLogin ? 'Đăng nhập' : 'Đăng ký' }}</button>
+  </form>
+
+  <p>
+    <a href="#" (click)="toggleForm(); $event.preventDefault()">
+      {{ isLogin ? 'Chưa có tài khoản? Đăng ký ngay' : 'Đã có tài khoản? Đăng nhập' }}
+    </a>
+  </p>
+</div>
